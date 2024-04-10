@@ -1,0 +1,36 @@
+{{ define "Index" }}
+  {{ template "Header" }}
+    {{ template "Menu"  }}
+    <h2> Ticket Registration Service </h2> 
+    </br>
+    
+    <table border="4">
+      <thead>
+      <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Number</td>
+        <td>Description</td>
+        <td>Status</td>
+        <td>ResolutionMsg</td>
+        <td>View</td>
+        <td>Edit</td>
+      </tr>
+       </thead>
+       <tbody>
+    {{ range . }}
+      <tr>
+        <td>{{ .CustomerId }}</td>
+        <td> {{ .CustomerName }} </td>
+        <td> {{ .CustomerNumber }} </td>
+        <td>{{ .CustomerComplaintDesc }} </td> 
+        <td>{{ .CustomerComplaintStatus }} </td> 
+        <td> {{ .ResolutionMessage }} </td>
+        <td><a href="/show?id={{ .CustomerId }}">View</a></td>
+        <td><a href="/edit?id={{ .CustomerId }}">Edit</a></td>
+      </tr>
+    {{ end }}
+       </tbody>
+    </table>
+  {{ template "Footer" }}
+{{ end }}

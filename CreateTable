@@ -1,0 +1,8 @@
+CREATE TABLE `Customer` (
+  `customerId` int(6) unsigned NOT NULL AUTO_INCREMENT,
+  `customerName` varchar(30) NOT NULL,
+  `customerNumber` int(11) NOT NULL,
+  `customerComplaintDesc` varchar(30) NOT NULL,
+  `customerComplaintStatus` varchar(30) NOT NULL,
+  PRIMARY KEY (`customerId`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;

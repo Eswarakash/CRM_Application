@@ -1,0 +1,26 @@
+{{ define "TicketSearch" }}
+  {{ template "Header" }}
+    {{ template "Menu"  }}
+    <h2> Search Tickets </h2>
+    <table border="1">
+      <thead>
+      <tr>
+        <td>Search_By_Name</td>
+        <td>Search_By_Status</td>
+        <td>Search_By_Id</td>
+    <tr>
+    </thead>
+    <tr>
+    <td>
+    <a href="/name?Name">CLICK ME</a>
+    </td>
+        <td>
+        <a href="/status?Status">CLICK ME</a>
+        </td>
+        <td>
+        <a href="/id?Id">CLICK ME</a>
+        </td>
+      </tr>     
+      <br/>
+  {{ template "Footer" }}
+{{ end }}

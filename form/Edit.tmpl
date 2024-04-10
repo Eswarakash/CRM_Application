@@ -1,0 +1,22 @@
+{{ define "Edit" }}
+  {{ template "Header" }}
+    {{ template "Menu" }} 
+   <h2>Edit Ticket Status</h2>  
+    <form method="POST" action="update">
+    
+      <input type="hidden" name="customerId" value="{{ .CustomerId }}" />
+      
+      <label> Name </label><input type="text" name="customerName" value="{{ .CustomerName }}"  /><br />
+      
+      <label> Number </label><input type="number" name="customerNumber" value="{{ .CustomerNumber }}"  /><br />
+      
+      <label> Description </label><input type="text" name="customerComplaintDesc" value="{{ .CustomerComplaintDesc }}"  /><br />
+      
+      <label> Status </label><input type="text" name="customerComplaintStatus" value="{{ .CustomerComplaintStatus }}"  /><br />
+      
+      <label> ResolutionMessage </label><input type="text" name="resolutionMessage" value="{{ .ResolutionMessage }}"  /><br />
+      
+      <input type="submit" value="Save user" />
+    </form><br />    
+  {{ template "Footer" }}
+{{ end }}

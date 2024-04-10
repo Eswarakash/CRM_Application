@@ -1,0 +1,13 @@
+{{ define "Show" }}
+  {{ template "Header" }}
+    {{ template "Menu"  }}
+    <h2> Register {{ .CustomerId }} </h2>
+      <p>Name: {{ .CustomerName }}</p>
+      <p>Number:  {{ .CustomerNumber }}</p>
+      <p>Description:  {{ .CustomerComplaintDesc }}</p>
+      <p>Status:  {{ .CustomerComplaintStatus }}</p>
+      <p>Status:  {{ .ResolutionMessage }}</p>
+      <br /> 
+      <a href="/edit?id={{ .CustomerId }}">Edit</a></p>
+  {{ template "Footer" }}
+{{ end }}

@@ -1,0 +1,12 @@
+{{ define "New" }}
+  {{ template "Header" }}
+    {{ template "Menu" }} 
+   <h2>New Name, Number, Complaint Description, Complaint Status</h2>  
+    <form method="POST" action="insert">
+      <label> Name </label><input type="text" name="CustomerName" /><br />
+      <label> Number </label><input type="number" name="CustomerNumber" /><br />
+      <label> Description </label><input type="text" name="CustomerComplaintDesc" /><br />
+      <input type="submit" value="Save user" />
+    </form>
+  {{ template "Footer" }}
+{{ end }}

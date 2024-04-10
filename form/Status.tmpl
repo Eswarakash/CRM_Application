@@ -1,0 +1,11 @@
+{{ define "Status" }}
+  {{ template "Header" }}
+    {{ template "Menu"  }}
+    <h2> Searching Ticket with status </h2>
+    <form method="POST" action="search2">
+    <label> Complaint Status </label><input type="text" name="customerComplaintStatus" /><br />
+    <input type="submit" value="Search">
+    </form>
+    
+      {{ template "Footer" }}
+{{ end }}

@@ -1,0 +1,11 @@
+{{ define "Id" }}
+  {{ template "Header" }}
+    {{ template "Menu"  }}
+    <h2> Searching Ticket with ID </h2>
+    <form method="POST" action="search3">
+    <label> Ticket Id </label><input type="text" name="customerId" /><br />
+    <input type="submit" value="Search">
+    </form>
+    
+      {{ template "Footer" }}
+{{ end }}
